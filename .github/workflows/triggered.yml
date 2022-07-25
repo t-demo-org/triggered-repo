@@ -1,0 +1,10 @@
+name: Trigger
+on:
+  workflow_dispatch:
+jobs:
+  trigger-echo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo workflow triggered
