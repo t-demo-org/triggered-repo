@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   trigger-echo:
-    runs-on: [self-hosted,instance1]
+    runs-on: [self-hosted,instance2]
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
