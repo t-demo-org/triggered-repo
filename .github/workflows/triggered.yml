@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: echo workflow triggered
+        run: echo workflow triggered on branch $GITHUB_REF
