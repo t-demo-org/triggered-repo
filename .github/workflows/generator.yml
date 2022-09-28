@@ -6,4 +6,4 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: Test variable pass
-        run: 'echo "${{needs.build.outputs.REPORT_PATH}}"'
+        run: 'echo "${{needs.tester.outputs.REPORT_PATH}}"'
