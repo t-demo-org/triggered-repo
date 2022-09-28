@@ -1,10 +1,12 @@
 name: Trigger
 on:
-  workflow_dispatch:
+  workflow_call:
 jobs:
   trigger-echo:
-    runs-on: [self-hosted,instance-2]
+    runs-on: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: echo workflow triggered on branch $GITHUB_REF
+        run: env
+      - name: List Files
+        run: ls -lah
