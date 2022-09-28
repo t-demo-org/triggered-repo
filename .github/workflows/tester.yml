@@ -1,0 +1,14 @@
+name: UI Tester
+on:
+  workflow_call:
+jobs:
+  tester:
+    outputs:
+      REPORT_PATH: ${{ steps.generated_path.outputs.path }}
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set App Name
+        run: 'echo "REPORT_PATH=/some/valid/path" >> $GITHUB_ENV'
+      - id: generated_path
+        run: echo "::set-output name=path::${REPORT_PATH}"

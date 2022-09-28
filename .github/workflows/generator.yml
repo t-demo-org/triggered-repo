@@ -1,0 +1,10 @@
+name: Report Generator
+on:
+  workflow_call:
+jobs:
+  generator:
+    runs-on: [ubuntu-latest]
+    needs: [tester]
+    steps:
+      - name: Test variable pass
+        run: 'echo "${{needs.build.outputs.REPORT_PATH}}"'
