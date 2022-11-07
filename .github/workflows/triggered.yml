@@ -1,6 +1,11 @@
 name: Trigger
 on:
-  workflow_call:
+  workflow_dispatch:
+    inputs:
+      variable:
+        required: true
+        type: string
+        
 jobs:
   trigger-echo:
     runs-on: [ubuntu-latest]
